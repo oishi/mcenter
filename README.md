@@ -1,10 +1,18 @@
-# Center Mouse (mcenter)
+# mcenter
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://www.apple.com/macos/)
+[![Raycast](https://img.shields.io/badge/Raycast-Extension-blue.svg)](https://www.raycast.com/)
 
 A Raycast command script that moves the mouse cursor to the center of a specified display
 
 ## Overview
 
 This tool provides a function to quickly move the cursor to the center of a specified display when you lose track of your mouse cursor in a multi-display environment. It can be easily called from Raycast, and by setting a shortcut key, you can access it even more quickly.
+
+![mcenter demonstration](mcenter.gif)
+
+> **Note:** This script was initially generated with AI assistance and then refined and improved by the author.
 
 ## Features
 

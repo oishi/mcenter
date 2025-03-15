@@ -27,7 +27,18 @@ guard sortedDisplays.count > 0 else {
 }
 
 // Specify display index
-let displayIndex = Int(CommandLine.arguments[1]) ?? 1
+// If there's only one display, use index 0 regardless of command line argument
+// Otherwise, use the command line argument or default to the middle display
+let displayIndex: Int
+if sortedDisplays.count == 1 {
+    displayIndex = 0
+} else if CommandLine.arguments.count > 1, let index = Int(CommandLine.arguments[1]) {
+    // Ensure the index is within bounds
+    displayIndex = min(max(0, index), sortedDisplays.count - 1)
+} else {
+    // Default to middle display for multiple displays
+    displayIndex = sortedDisplays.count > 2 ? 1 : 0
+}
 let displayFrame = sortedDisplays[displayIndex].frame
 
 // Calculate center coordinates

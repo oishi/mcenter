@@ -34,12 +34,20 @@ This tool provides a function to quickly move the cursor to the center of a spec
    git clone https://github.com/oishi/mcenter.git
    ```
 
-2. Copy the `mcenter.sh` and `mcenter.swift` files to your Raycast command scripts directory
+2. First, run the `.sh` file to verify it works
    ```bash
-   cp mcenter.sh mcenter.swift ~/.raycast/scripts/
+   ./mcenter.sh
    ```
+   On the first run, `mcenter.swift` will be automatically compiled and a `mcenter` executable file will be generated.
 
-3. Open Raycast and run mcenter in the command palette (it will be automatically compiled on first run)
+3. After confirming it works, copy both the `mcenter.sh` and the generated `mcenter` executable to your Raycast scripts directory
+   ```bash
+   cp mcenter.sh mcenter ~/.raycast/scripts/
+   ```
+   
+   > **Note:** The destination path may vary depending on your environment. Make sure to specify the directory that is correctly configured as the command scripts directory in your Raycast settings.
+
+4. Open Raycast and run mcenter in the command palette
 
 ## How It Works
 

@@ -49,6 +49,17 @@ This tool provides a function to quickly move the cursor to the center of a spec
 
 4. Open Raycast and run mcenter in the command palette
 
+## Configuration
+
+You can customize the default display index by modifying the `DEFAULT_DISPLAY_INDEX` variable in the `mcenter.sh` script:
+
+```bash
+# Default display index (can be modified for different environments)
+DEFAULT_DISPLAY_INDEX=1
+```
+
+Change this value to match your preferred default display. This is especially useful when you have a consistent multi-display setup and want to target a specific display by default.
+
 ## How It Works
 
 The tool uses macOS's CoreGraphics framework to retrieve a list of active displays and calculate the center coordinates of the specified display. It then uses the `CGWarpMouseCursorPosition` function to move the mouse cursor to those center coordinates.

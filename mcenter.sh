@@ -35,8 +35,11 @@ if [ ! -f "$BINARY_PATH" ]; then
   echo "Compilation complete"
 fi
 
+# Default display index (can be modified for different environments)
+DEFAULT_DISPLAY_INDEX=1
+
 # Get command line arguments
-DISPLAY_INDEX=${1:-1}
+DISPLAY_INDEX=${1:-$DEFAULT_DISPLAY_INDEX}
 
 # Run the compiled executable
 "$BINARY_PATH" "$DISPLAY_INDEX"
